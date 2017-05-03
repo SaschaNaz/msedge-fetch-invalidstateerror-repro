@@ -9,7 +9,7 @@
     "start": "node ."
   },
   "engines": {
-    "node": "^7.0.0"
+    "node": "7.x"
   },
   "dependencies": {
     "@types/mz": "^0.0.31",
