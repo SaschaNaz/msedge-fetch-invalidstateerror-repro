@@ -1,0 +1,13 @@
+{
+  "name": "fetch-invalidstateerror-repro",
+  "version": "1.0.0",
+  "description": "Repro for MSEdge Fetch error",
+  "main": "index.js",
+  "author": "Kagami Sascha Rosylight <saschanaz@outlook.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mz": "^0.0.31",
+    "@types/node": "^7.0.15",
+    "mz": "^2.6.0"
+  }
+}
