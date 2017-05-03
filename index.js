@@ -13,10 +13,15 @@ http.createServer(async (req, res) => {
             'Transfer-Encoding': 'chunked'
         });
         const intervalId = setInterval(() => {
-            res.write(JSON.stringify({
-                value: "Data",
-                timeStamp: new Date().toUTCString()
-            }) + "\r\n");
+            try {
+                res.write(JSON.stringify({
+                    value: "Data",
+                    timeStamp: new Date().toUTCString()
+                }) + "\r\n");
+            }
+            catch (e) {
+                clearInterval(intervalId);
+            }
         }, 1000);
         res.on("close", () => {
             clearInterval(intervalId);
